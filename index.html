@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجرك الاحترافي | خدمات رقمية موثوقة</title>
+
+    <!-- Google Fonts for a professional look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Your Custom CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================== Header ================== -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>Astro Shop</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#services">خدماتنا</a>
+                <a href="#features">لماذا نحن؟</a>
+                <a href="#faq">الأسئلة الشائعة</a>
+            </nav>
+            <a href="#" class="btn btn-secondary login-btn">دخول</a>
+        </div>
+    </header>
+
+    <!-- ================== Main Content ================== -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">المتجر الوحيد لي رح يتهلا فيك في الاسعار!</h1>
+                <p class="hero-subtitle">نقدملك منتجات شابة باسعار ممتازة وبدون اي مشاكل طبعا.</p>
+                <a href="#services" class="btn btn-primary btn-lg">استكشف خدماتنا الآن <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+             <div class="container">
+                <div class="feature-item">
+                    <i class="fas fa-shield-halved"></i>
+                    <h3>أمان وموثوقية</h3>
+                    <p>نضمن لك أمان معاملاتك وسرية بياناتك الكاملة عبر بوابات دفع عالمية.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>تنفيذ فوري</h3>
+                    <p>احصل على خدماتك الرقمية في دقائق معدودة بعد إتمام عملية الشراء.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <h3>دعم فني متكامل</h3>
+                    <p>فريقنا جاهز لمساعدتك والإجابة على استفساراتك على مدار الساعة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">خدماتنا المصممة خصيصاً لك :</h2>
+                <div class="service-grid">
+                    
+                    <!-- Service Card: Telegram -->
+                    <div class="service-card-pro">
+                        <div class="card-icon icon-telegram"><i class="fab fa-telegram-plane"></i></div>
+                        <h3>تليجرام بريميوم</h3>
+                        <p>تمتع بكامل ميزات تليجرام الحصرية بلا حدود.</p>
+                        <button class="btn btn-primary-outline" data-service="telegram">عرض التفاصيل والخطط</button>
+                    </div>
+
+                    <!-- Service Card: Virtual Card -->
+                    <div class="service-card-pro">
+                        <div class="card-icon icon-card"><i class="fas fa-credit-card"></i></div>
+                        <h3>بطاقات افتراضية</h3>
+                        <p>تسوق عبر الإنترنت بأمان مع بطاقاتنا مسبقة الدفع.</p>
+                        <button class="btn btn-primary-outline" data-service="card">عرض التفاصيل</button>
+                    </div>
+
+                    <!-- Service Card: Netflix -->
+                    <div class="service-card-pro">
+                        <div class="card-icon icon-netflix"><i class="fas fa-tv"></i></div>
+                        <h3>حسابات Netflix</h3>
+                        <p>شاهد بلا حدود أفلامك ومسلسلاتك المفضلة بأعلى جودة.</p>
+                        <button class="btn btn-primary-outline" data-service="netflix">عرض الخطط والأسعار</button>
+                    </div>
+
+                    <!-- Service Card: Spotify -->
+                    <div class="service-card-pro">
+                        <div class="card-icon icon-spotify"><i class="fab fa-spotify"></i></div>
+                        <h3>اشتراك Spotify</h3>
+                        <p>استمتع بملايين الأغاني والبودكاست بدون إعلانات.</p>
+                        <button class="btn btn-primary-outline" data-service="spotify">عرض الخطط والأسعار</button>
+                    </div>
+
+                    <!-- Service Card: ChatGPT -->
+                     <div class="service-card-pro">
+                        <div class="card-icon icon-chatgpt"><i class="fas fa-brain"></i></div>
+                        <h3>اشتراك ChatGPT Plus</h3>
+                        <p>استفد من قوة الذكاء الاصطناعي المتطور لإنجاز مهامك.</p>
+                        <button class="btn btn-primary-outline" data-service="chatgpt">عرض التفاصيل</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">أسئلة يتكرر طرحها</h2>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>كيف أستلم الخدمة بعد الدفع؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>بمجرد تأكيد الدفع، سيتم إرسال تفاصيل الخدمة (مثل معلومات الحساب أو كود التفعيل) داخل المحادثة الخاصة بك واي خطأ يرجى ارسال لقطة شاشة وشكرا</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>ما هي طرق الدفع المتاحة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>نحن نقبل الدفع عبر البطاقات الائتمانية (Visa, binance),بالاضافة الى بريدي موب, سيسيبي,فليكسي</p>
+                    </div>
+                </div>
+                 <div class="faq-item">
+                    <button class="faq-question">
+                        <span>هل الحسابات التي تبيعونها مضمونة؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>بالتأكيد. جميع الحسابات والاشتراكات التي نقدمها مضمونة للعمل طوال فترة الاشتراك التي قمت بشرائها. في حال واجهت أي مشكلة، فريق الدعم الفني لدينا جاهز لمساعدتك فورًا.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================== Footer ================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 متجر استرو. جميع الحقوق محفوظة.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================== Modal (Pop-up) Structure ================== -->
+    <div id="service-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal-btn">&times;</button>
+            <div id="modal-body">
+                <!-- Service details will be dynamically injected here by JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- ================== Floating Exclusive Offer Button ================== -->
+    <button id="exclusive-offer-btn" class="floating-btn">
+        <i class="fas fa-star"></i>
+        <span>عرض حصري</span>
+    </button>
+
+    <!-- Your Custom JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
