@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 "ملصقات متحركة حصرية"
             ],
             plans: [
-                // The new exclusive offer is added here
                 { duration: 'شهر واحد (عرض حصري)', price: '1200 دج', isExclusive: true },
                 { duration: '3 أشهر', price: '3100 دج' },
                 { duration: '6 أشهر', price: '4000 دج' },
@@ -98,6 +97,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 { duration: 'اشتراك شهري منفرد', price: '2500 دج' }
             ],
             contactLink: 'https://t.me/astro_qp' 
+        },
+        snapchat: {
+            icon: 'fab fa-snapchat',
+            iconColor: '#FFFC00',
+            title: 'اشتراك سناب شات بلس',
+            description: 'اطلق العنان لإمكانيات سناب شات الكاملة مع ميزات حصرية ومميزة.',
+            features: [
+                "رؤية من أعاد مشاهدة قصتك",
+                "مؤشر إعادة المشاهدة",
+                "أيقونات تطبيق حصرية",
+                "مسارات الشبح على الخريطة",
+                "شارة نجمة سناب شات بلس"
+            ],
+            plans: [
+                { duration: 'شهر واحد <span class="plan-gift-text">+ هدية 🎁</span>', price: '50 ألف دج' },
+                { duration: '3 أشهر <span class="plan-gift-text">+ هدية 🎁</span>', price: '120 ألف دج' },
+                { duration: '1 سنة <span class="plan-gift-text exclusive">+ هدية حصرية ✨</span>', price: '250 ألف دج' }
+            ],
+            contactLink: 'https://t.me/astro_qp' 
         }
     };
 
@@ -127,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         service.plans.map((plan, index) => {
                             const exclusiveClass = plan.isExclusive ? 'plan-exclusive' : '';
                             return `<div class="price-plan-pro ${exclusiveClass} plan-c-${index + 1}">
-                                        <span>${plan.duration}</span>
+                                        <div class="plan-duration">${plan.duration}</div>
                                         <strong>${plan.price}</strong>
                                     </div>`;
                         }).join('') +
@@ -136,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modalBody.innerHTML = `
             <div class="modal-header">
-                <div class="modal-icon" style="background-color: ${service.iconColor};"><i class="${service.icon}"></i></div>
+                <div class="modal-icon" style="background-color: ${service.iconColor}; color: ${service.iconColor === '#FFFC00' ? '#111827' : 'white'};"><i class="${service.icon}"></i></div>
                 <h2 class="modal-title">${service.title}</h2>
                 <p class="modal-description">${service.description}</p>
             </div>
@@ -169,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4 class="modal-section-title">تفاصيل العرض</h4>
                 <div class="price-plans-pro">
                     <div class="price-plan-pro plan-exclusive">
-                        <span>${exclusivePlan.duration}</span>
+                        <div class="plan-duration">${exclusivePlan.duration}</div>
                         <strong>${exclusivePlan.price}</strong>
                     </div>
                 </div>

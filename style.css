@@ -12,6 +12,7 @@
     --text-secondary: #9CA3AF;
     --border-color: #374151;
     --alert-color: #E53935; /* Red for the alert box */
+    --success-color: #10B981; /* Green for gift text */
     --white: #FFFFFF;
 }
 
@@ -145,7 +146,7 @@ body {
 .icon-chatgpt { background: #10A37F; }
 .icon-telegram { background: #2AABEE; }
 .icon-card { background: #F9A825; }
-.icon-dollar { background: var(--success-color); }
+.icon-snapchat { background: #FFFC00; color: var(--background-dark); } /* Snapchat Yellow */
 
 .service-card-pro h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 .service-card-pro p { color: var(--text-secondary); margin-bottom: 1.5rem; flex-grow: 1; }
@@ -166,7 +167,7 @@ body {
 .social-links a { color: var(--text-secondary); font-size: 1.5rem; margin: 0 10px; transition: color 0.3s ease; }
 .social-links a:hover { color: #4F46E5; }
 
-/* ================== MODAL (POP-UP) STYLES - V2 (PC PERFECTED) ================== */
+/* ================== MODAL (POP-UP) STYLES - FINAL ================== */
 .modal-overlay {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background-color: rgba(10, 15, 25, 0.7);
@@ -175,163 +176,70 @@ body {
     z-index: 1000;
     opacity: 0; pointer-events: none;
     transition: opacity 0.3s ease;
-    padding: 20px; /* Add padding for small screens */
+    padding: 20px;
 }
-
 .modal-overlay.show-modal { opacity: 1; pointer-events: auto; }
-
 .modal-content {
     background: var(--background-light);
     border: 1px solid var(--border-color);
     border-radius: 16px;
     width: 100%;
-    max-width: 500px; /* Reduced max-width for a tighter look */
+    max-width: 500px;
     padding: 2rem; position: relative;
     transform: scale(0.9); transition: transform 0.3s ease;
-    max-height: 90vh; /* Prevent modal from being too tall */
-    overflow-y: auto; /* Add scroll if content is too long */
+    max-height: 90vh;
+    overflow-y: auto;
 }
-
 .modal-overlay.show-modal .modal-content { transform: scale(1); }
-
 .close-modal-btn { position: absolute; top: 15px; left: 20px; background: none; border: none; color: var(--text-secondary); font-size: 2.5rem; cursor: pointer; line-height: 1; }
-
 .modal-header { text-align: center; margin-bottom: 2rem; }
-.modal-icon { width: 80px; height: 80px; margin: 0 auto 1.5rem; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2.5rem; color: var(--white); }
+.modal-icon { width: 80px; height: 80px; margin: 0 auto 1.5rem; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 2.5rem; }
 .modal-title { font-size: 2rem; font-weight: 900; margin-bottom: 0.5rem; }
 .modal-description { color: var(--text-secondary); font-size: 1.1rem; }
-
-/* === THIS IS THE KEY FIX FOR PC VIEW === */
-.modal-details-content {
-    max-width: 400px; /* Constrain the width of the lists */
-    margin: 2rem auto 0; /* Center the container horizontally */
-}
-
-.modal-section-title {
-    color: var(--primary-color);
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-.feature-list-pro, .price-plans-pro {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-bottom: 2rem;
-}
-.feature-item-pro, .price-plan-pro {
-    background-color: var(--background-dark);
-    padding: 0.9rem 1.2rem; /* Adjusted padding */
-    border-radius: 10px;
-    font-size: 1.1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+.modal-details-content { max-width: 400px; margin: 2rem auto 0; }
+.modal-section-title { color: var(--primary-color); font-weight: 700; text-align: center; margin-bottom: 1rem; font-size: 1.3rem; }
+.feature-list-pro, .price-plans-pro { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
+.feature-item-pro, .price-plan-pro { background-color: var(--background-dark); padding: 0.9rem 1.2rem; border-radius: 10px; font-size: 1.1rem; transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .feature-item-pro { text-align: center; border: 1px solid var(--border-color); }
-.price-plan-pro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-width: 2px;
-    border-style: solid;
-    cursor: pointer;
-}
+.price-plan-pro { display: flex; justify-content: space-between; align-items: center; border-width: 2px; border-style: solid; cursor: pointer; }
 .price-plan-pro:hover { transform: scale(1.03); box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
 .price-plan-pro strong { color: var(--text-primary); font-weight: 700; }
-.price-plan-pro small { display: block; font-size: 0.8rem; color: var(--text-secondary); text-align: center; width: 100%; margin-top: -5px; }
-
-/* -- Colored borders to match the image -- */
-.price-plan-pro.plan-c-1 { border-color: #10B981; } /* Green */
-.price-plan-pro.plan-c-2 { border-color: #3B82F6; } /* Blue */
-.price-plan-pro.plan-c-3 { border-color: #8B5CF6; } /* Purple */
-.price-plan-pro.plan-c-4 { border-color: #F59E0B; } /* Amber */
-
-/* Alert box inside the modal */
-.alert-pro {
-    text-align: center;
-    padding: 0.8rem;
-    border: 1px solid var(--alert-color);
-    color: var(--alert-color);
-    border-radius: 8px;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.modal-cta-button {
-    display: flex; justify-content: center; align-items: center; gap: 10px;
-    width: 100%;
-    max-width: 400px; /* Match the content width */
-    margin: 0 auto; /* Center the button */
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    background: var(--primary-gradient);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
+.price-plan-pro .plan-duration { display: flex; flex-direction: column; align-items: flex-start; }
+.price-plan-pro.plan-c-1 { border-color: #10B981; }
+.price-plan-pro.plan-c-2 { border-color: #3B82F6; }
+.price-plan-pro.plan-c-3 { border-color: #8B5CF6; }
+.price-plan-pro.plan-c-4 { border-color: #F59E0B; }
+.alert-pro { text-align: center; padding: 0.8rem; border: 1px solid var(--alert-color); color: var(--alert-color); border-radius: 8px; margin-top: 1.5rem; margin-bottom: 1.5rem; max-width: 400px; margin-left: auto; margin-right: auto; }
+.modal-cta-button { display: flex; justify-content: center; align-items: center; gap: 10px; width: 100%; max-width: 400px; margin: 0 auto; padding: 15px 30px; font-size: 1.2rem; background: var(--primary-gradient); color: var(--white); text-decoration: none; border-radius: 12px; transition: all 0.3s ease; }
 .modal-cta-button:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(79, 70, 229, 0.5); }
 
 /* ================== Floating Button and Exclusive Offer Styles ================== */
 .floating-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 999; /* Below the modal overlay */
-    background: var(--primary-gradient);
-    color: var(--white);
-    border: none;
-    border-radius: 50px;
-    padding: 15px 25px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    font-family: 'Cairo', sans-serif;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    position: fixed; bottom: 30px; right: 30px; z-index: 999;
+    background: var(--primary-gradient); color: var(--white); border: none;
+    border-radius: 50px; padding: 15px 25px; font-size: 1.1rem; font-weight: 700;
+    font-family: 'Cairo', sans-serif; cursor: pointer; display: flex; align-items: center; gap: 10px;
     box-shadow: 0 5px 15px rgba(79, 70, 229, 0.5);
     transition: transform 0.3s ease;
 }
+.floating-btn:hover { transform: scale(1.1); }
+.floating-btn i { animation: star-shine 1.5s infinite ease-in-out; }
+@keyframes star-shine { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.3); opacity: 0.7; } }
 
-.floating-btn:hover {
-    transform: scale(1.1);
-}
-
-.floating-btn i {
-    animation: star-shine 1.5s infinite ease-in-out;
-}
-
-@keyframes star-shine {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.3); opacity: 0.7; }
-}
-
-/* Special style for the exclusive plan inside the modal */
 .price-plan-pro.plan-exclusive {
-    border-color: #FFD700; /* Gold color for exclusivity */
-    border-width: 3px;
-    position: relative;
-    overflow: hidden;
-    padding-top: 2rem; /* Make space for the ribbon */
+    border-color: #FFD700; border-width: 3px; position: relative; overflow: hidden;
+    padding-top: 2rem;
 }
-
 .price-plan-pro.plan-exclusive::before {
     content: "الأكثر طلباً";
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #FFD700;
-    color: var(--background-dark);
-    padding: 3px 15px;
-    font-size: 0.8rem;
-    font-weight: 700;
+    position: absolute; top: 0; right: 0;
+    background-color: #FFD700; color: var(--background-dark);
+    padding: 3px 15px; font-size: 0.8rem; font-weight: 700;
     border-bottom-left-radius: 10px;
 }
-
+.plan-gift-text { font-size: 0.9rem; font-weight: 700; margin-top: 4px; color: var(--success-color); opacity: 0.9; }
+.plan-gift-text.exclusive { color: #FFD700; animation: pulse-gold 2s infinite; }
+@keyframes pulse-gold { 0% { text-shadow: 0 0 2px #FFD700; } 50% { text-shadow: 0 0 10px #FFD700; } 100% { text-shadow: 0 0 2px #FFD700; } }
 
 /* ================== MOBILE RESPONSIVENESS ================== */
 @media (max-width: 768px) {
@@ -349,5 +257,30 @@ body {
     .faq-question { font-size: 1.1rem; }
     .modal-content { padding: 1.5rem; }
     .modal-title { font-size: 1.5rem; }
-    .floating-btn { right: 15px; bottom: 15px; padding: 12px 20px; font-size: 1rem; } /* Adjust floating button for mobile */
+    .floating-btn { right: 15px; bottom: 15px; padding: 12px 20px; font-size: 1rem; }
+}
+/* ================== CTA Section for Games ================== */
+.cta-section {
+    background: linear-gradient(45deg, rgba(31, 41, 55, 0.95), rgba(55, 65, 81, 0.95)), url('https://i.imgur.com/8aV4w2W.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 80px 0;
+    text-align: center;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+.cta-section i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+.cta-section p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
 }

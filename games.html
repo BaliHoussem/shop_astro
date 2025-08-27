@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ردهة الألعاب - Astro Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Main styles (for consistency) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Styles specific to the games page -->
+    <link rel="stylesheet" href="games.css">
+</head>
+<body class="games-body">
+
+    <!-- ================== Games Page Header ================== -->
+    <header class="games-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-gamepad"></i>
+                <span>قسم الألعاب</span>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="desktop-back-btn">العودة للرئيسية</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="game-lounge-page" class="services">
+            <div class="container">
+                <h1 class="section-title shiny-title"><span>✨</span> اختار لعبتك!<span>✨</span></h1>
+                <p class="hero-subtitle">جميع عمليات الشحن تتم عبر ID اللاعب بأمان وسرعة.</p>
+                
+                <div class="game-cards-container-v2">
+                    <!-- PUBG Card -->
+                    <div class="game-card-v2" data-service="pubg">
+                        <i class="game-card-logo-v2"></i>
+                        <h4>شحن شدات ببجي</h4>
+                    </div>
+                    <!-- Free Fire Card -->
+                    <div class="game-card-v2" data-service="freefire">
+                        <i class="game-card-logo-v2"></i>
+                        <h4>شحن جواهر فري فاير</h4>
+                    </div>
+                    <!-- eFootball Card -->
+                    <div class="game-card-v2" data-service="efootball">
+                        <i class="game-card-logo-v2"></i>
+                        <h4>شحن كوينز eFootball</h4>
+                    </div>
+                    <!-- Brawl Stars Card -->
+                    <div class="game-card-v2" data-service="brawlstars">
+                        <i class="game-card-logo-v2"></i>
+                        <h4>شحن  براول ستارز</h4>
+                    </div>
+                    <!-- Blood Strike Card -->
+                    <div class="game-card-v2" data-service="bloodstrike">
+                        <i class="game-card-logo-v2"></i>
+                        <h4>شحن ذهب بلود سترايك</h4>
+                    </div>
+                    <!-- Call of Duty Card -->
+                    <div class="game-card-v2" data-service="cod">
+                        <i class="game-card-logo-v2"></i>
+                        <h4>شحن  CoD Mobile</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- We use the same modal structure from the main page -->
+    <div id="service-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal-btn">&times;</button>
+            <div id="modal-body">
+                <!-- Game details will be dynamically injected here by games.js -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating Back Button for Mobile -->
+    <a href="index.html" class="floating-back-btn">
+        <i class="fas fa-arrow-right"></i>
+        <span>الرئيسية</span>
+    </a>
+    
+    <!-- JS for this page -->
+    <script src="games.js"></script>
+</body>
+</html>

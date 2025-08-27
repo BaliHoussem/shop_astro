@@ -1,0 +1,156 @@
+/* ================== General Styles for Games Page ================== */
+body.games-body {
+    background-color: var(--background-dark);
+}
+
+.games-header {
+    background-color: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+.games-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.games-header .logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--white);
+}
+.games-header .logo i { color: var(--primary-color); }
+.games-header .main-nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.games-header .main-nav a:hover {
+    color: var(--white);
+}
+
+#game-lounge-page .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: -2rem auto 3rem;
+    text-align: center;
+}
+
+/* ================== Minimalist Game Card Styles ================== */
+.game-cards-container-v2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.game-card-v2 {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    height: 380px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card-v2:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.game-card-logo-v2 {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.game-card-v2 h4 {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+/* --- Unique background gradients for each game --- */
+[data-service="pubg"] { background: linear-gradient(135deg, #a1887f 0%, #795548 100%); }
+[data-service="freefire"] { background: linear-gradient(135deg, #ff7043 0%, #ff3d00 100%); }
+[data-service="efootball"] { background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%); }
+[data-service="brawlstars"] { background: linear-gradient(135deg, #ffca28 0%, #ffab00 100%); }
+[data-service="bloodstrike"] { background: linear-gradient(135deg, #e53935 0%, #b71c1c 100%); }
+[data-service="cod"] { background: linear-gradient(135deg, #607d8b 0%, #37474f 100%); }
+
+/* --- Adding icons to the cards --- */
+.game-card-logo-v2::before { font-family: "Font Awesome 6 Free"; font-weight: 900; }
+[data-service="pubg"] .game-card-logo-v2::before { content: "\f4ce"; }
+[data-service="freefire"] .game-card-logo-v2::before { content: "\f7e4"; }
+[data-service="efootball"] .game-card-logo-v2::before { content: "\f1e3"; }
+[data-service="brawlstars"] .game-card-logo-v2::before { content: "\f714"; }
+[data-service="bloodstrike"] .game-card-logo-v2::before { content: "\f05b"; }
+[data-service="cod"] .game-card-logo-v2::before { content: "\f3ed"; }
+
+
+/* ================== Floating Back Button Styles ================== */
+.floating-back-btn {
+    display: none; /* Hidden by default on desktop */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background: var(--primary-gradient);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Cairo', sans-serif;
+    cursor: pointer;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.5);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.floating-back-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ================== Mobile Responsiveness for Games Page ================== */
+@media (max-width: 768px) {
+    /* Show floating back button and hide the desktop one */
+    .floating-back-btn {
+        display: flex;
+    }
+    .desktop-back-btn {
+        display: none;
+    }
+
+    /* Improve card appearance on mobile */
+    .game-card-v2 {
+        height: 300px; /* Make cards a bit shorter */
+    }
+    .game-card-logo-v2 {
+        font-size: 4rem; /* Make icon a bit smaller */
+    }
+    .game-card-v2 h4 {
+        font-size: 1.5rem;
+    }
+
+    #game-lounge-page {
+        padding-top: 40px;
+    }
+}
