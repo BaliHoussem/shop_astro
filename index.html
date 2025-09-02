@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجرك الاحترافي | خدمات رقمية موثوقة</title>
+    <title>Astro Shop | خدمات رقمية موثوقة</title>
 
     <!-- Google Fonts for a professional look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,8 +26,8 @@
                 <span>Astro Shop</span>
             </div>
             <nav class="main-nav">
-                <a href="#services">خدماتنا</a>
-                <a href="#features">لماذا نحن؟</a>
+                <a href="#services">الاشتراكات</a>
+                <a href="#cta-games">الألعاب</a>
                 <a href="#faq">الأسئلة الشائعة</a>
             </nav>
             <a href="#" class="btn btn-secondary login-btn">دخول</a>
@@ -66,102 +66,51 @@
             </div>
         </section>
 
-        <!-- Services Section -->
+        <!-- Services Section (Subscriptions) -->
         <section id="services" class="services">
             <div class="container">
-                <h2 class="section-title">خدماتنا المصممة خصيصاً لك :</h2>
+                <h2 class="section-title">الاشتراكات والخدمات الرقمية :</h2>
                 <div class="service-grid">
-                    
-                    <!-- Service Card: Telegram -->
-                    <div class="service-card-pro">
-                        <div class="card-icon icon-telegram"><i class="fab fa-telegram-plane"></i></div>
-                        <h3>تليجرام بريميوم</h3>
-                        <p>تمتع بكامل ميزات تليجرام الحصرية بلا حدود.</p>
-                        <button class="btn btn-primary-outline" data-service="telegram">عرض التفاصيل والخطط</button>
-                    </div>
-
-                    <!-- Service Card: Virtual Card -->
-                    <div class="service-card-pro">
-                        <div class="card-icon icon-card"><i class="fas fa-credit-card"></i></div>
-                        <h3>بطاقات افتراضية</h3>
-                        <p>تسوق عبر الإنترنت بأمان مع بطاقاتنا مسبقة الدفع.</p>
-                        <button class="btn btn-primary-outline" data-service="card">عرض التفاصيل</button>
-                    </div>
-
-                    <!-- Service Card: Netflix -->
-                    <div class="service-card-pro">
-                        <div class="card-icon icon-netflix"><i class="fas fa-tv"></i></div>
-                        <h3>حسابات Netflix</h3>
-                        <p>شاهد بلا حدود أفلامك ومسلسلاتك المفضلة بأعلى جودة.</p>
-                        <button class="btn btn-primary-outline" data-service="netflix">عرض الخطط والأسعار</button>
-                    </div>
-
-                    <!-- Service Card: Spotify -->
-                    <div class="service-card-pro">
-                        <div class="card-icon icon-spotify"><i class="fab fa-spotify"></i></div>
-                        <h3>اشتراك Spotify</h3>
-                        <p>استمتع بملايين الأغاني والبودكاست بدون إعلانات.</p>
-                        <button class="btn btn-primary-outline" data-service="spotify">عرض الخطط والأسعار</button>
-                    </div>
-
-                    <!-- Service Card: ChatGPT -->
-                     <div class="service-card-pro">
-                        <div class="card-icon icon-chatgpt"><i class="fas fa-brain"></i></div>
-                        <h3>اشتراك ChatGPT Plus</h3>
-                        <p>استفد من قوة الذكاء الاصطناعي المتطور لإنجاز مهامك.</p>
-                        <button class="btn btn-primary-outline" data-service="chatgpt">عرض التفاصيل</button>
-                    </div>
-                    
-                    <!-- Service Card: Snapchat -->
-                    <div class="service-card-pro">
-                        <div class="card-icon icon-snapchat"><i class="fab fa-snapchat"></i></div>
-                        <h3>اشتراك سناب شات بلس</h3>
-                        <p>اطلق العنان لميزات حصرية ومميزة في سناب شات.</p>
-                        <button class="btn btn-primary-outline" data-service="snapchat">عرض التفاصيل والعروض</button>
-                    </div>
-
+                    <div class="service-card-pro" data-service="telegram"><div class="card-icon icon-telegram"><i class="fab fa-telegram-plane"></i></div><h3>تليجرام بريميوم</h3><p>تمتع بكامل ميزات تليجرام الحصرية بلا حدود.</p><button class="btn btn-primary-outline">عرض التفاصيل والخطط</button></div>
+                    <div class="service-card-pro" data-service="card"><div class="card-icon icon-card"><i class="fas fa-credit-card"></i></div><h3>بطاقات افتراضية</h3><p>تسوق عبر الإنترنت بأمان مع بطاقاتنا مسبقة الدفع.</p><button class="btn btn-primary-outline">عرض التفاصيل</button></div>
+                    <div class="service-card-pro" data-service="netflix"><div class="card-icon icon-netflix"><i class="fas fa-tv"></i></div><h3>حسابات Netflix</h3><p>شاهد بلا حدود أفلامك ومسلسلاتك المفضلة بأعلى جودة.</p><button class="btn btn-primary-outline">عرض الخطط والأسعار</button></div>
+                    <div class="service-card-pro" data-service="spotify"><div class="card-icon icon-spotify"><i class="fab fa-spotify"></i></div><h3>اشتراك Spotify</h3><p>استمتع بملايين الأغاني والبودكاست بدون إعلانات.</p><button class="btn btn-primary-outline">عرض الخطط والأسعار</button></div>
+                    <div class="service-card-pro" data-service="youtube"><div class="card-icon icon-youtube"><i class="fab fa-youtube"></i></div><h3>يوتيوب بريميوم</h3><p>استمتع بمشاهدة بلا حدود وبدون إعلانات مع يوتيوب ميوزك.</p><button class="btn btn-primary-outline">عرض التفاصيل والخطط</button></div>
+                    <div class="service-card-pro" data-service="chatgpt"><div class="card-icon icon-chatgpt"><i class="fas fa-brain"></i></div><h3>اشتراك ChatGPT Plus</h3><p>استفد من قوة الذكاء الاصطناعي المتطور لإنجاز مهامك.</p><button class="btn btn-primary-outline">عرض التفاصيل</button></div>
+                    <div class="service-card-pro" data-service="snapchat"><div class="card-icon icon-snapchat"><i class="fab fa-snapchat"></i></div><h3>اشتراك سناب شات بلس</h3><p>اطلق العنان لميزات حصرية ومميزة في سناب شات.</p><button class="btn btn-primary-outline">عرض التفاصيل والعروض</button></div>
+                    <div class="service-card-pro" data-service="crunchyroll"><div class="card-icon icon-crunchyroll"><i class="fas fa-bolt"></i></div><h3>كرانشي رول</h3><p>بوابتك الأولى لعالم الأنمي، شاهد أحدث الحلقات بلا حدود.</p><button class="btn btn-primary-outline">عرض الباقات</button></div>
+                    <div class="service-card-pro" data-service="canva"><div class="card-icon icon-canva"><i class="fas fa-palette"></i></div><h3>Canva Pro</h3><p>صمم كالمحترفين مع وصول كامل لأدوات كانفا المدفوعة.</p><button class="btn btn-primary-outline">عرض التفاصيل</button></div>
+                    <div class="service-card-pro" data-service="shahid"><div class="card-icon icon-shahid"><i class="fas fa-tv-alt"></i></div><h3>شاهد VIP</h3><p>استمتع بأضخم مكتبة من الأفلام والمسلسلات العربية الحصرية.</p><button class="btn btn-primary-outline">عرض الباقات</button></div>
+                    <div class="service-card-pro" data-service="discord"><div class="card-icon icon-discord"><i class="fab fa-discord"></i></div><h3>ديسكورد نيترو</h3><p>عزز تجربتك في ديسكورد بميزات رائعة وفريدة.</p><button class="btn btn-primary-outline">عرض الباقات</button></div>
                 </div>
             </div>
         </section>
-        <!-- ================== Call to Action for Game Lounge ================== -->
-<section id="cta-games" class="cta-section">
-    <div class="container">
-        <i class="fas fa-gamepad"></i>
-        <h2>نتا غايمر؟ ادخل وقلش روحك!</h2>
-        <p>اكتشف عروضنا الحصرية لشحن ألعابك المفضلة بأسعار تنافسية.</p>
-        <a href="games.html" class="btn btn-primary btn-lg">ادخل إلى ردهة الألعاب</a>
-    </div>
-</section>
+
+        <!-- Call to Action for Game Lounge -->
+        <section id="cta-games" class="cta-section">
+            <div class="container">
+                <i class="fas fa-gamepad"></i>
+                <h2>نتا غايمر؟ ادخل وقلش روحك!</h2>
+                <p>اكتشف عروضنا الحصرية لشحن ألعابك المفضلة بأسعار تنافسية.</p>
+                <a href="games.html" class="btn btn-primary btn-lg">ادخل إلى ردهة الألعاب</a>
+            </div>
+        </section>
+
         <!-- FAQ Section -->
         <section id="faq" class="faq">
             <div class="container">
                 <h2 class="section-title">أسئلة يتكرر طرحها</h2>
                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>كيف أستلم الخدمة بعد الدفع؟</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>بمجرد تأكيد الدفع، سيتم إرسال تفاصيل الخدمة (مثل معلومات الحساب أو كود التفعيل) داخل المحادثة الخاصة بك واي خطأ يرجى ارسال لقطة شاشة وشكرا</p>
-                    </div>
+                    <button class="faq-question"><span>كيف أستلم الخدمة بعد الدفع؟</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>بمجرد تأكيد الدفع، سيتم إرسال تفاصيل الخدمة (مثل معلومات الحساب أو كود التفعيل) داخل المحادثة الخاصة بك واي خطأ يرجى ارسال لقطة شاشة وشكرا</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question">
-                        <span>ما هي طرق الدفع المتاحة؟</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>نحن نقبل الدفع عبر البطاقات الائتمانية (Visa, binance),بالاضافة الى بريدي موب, سيسيبي,فليكسي</p>
-                    </div>
+                    <button class="faq-question"><span>ما هي طرق الدفع المتاحة؟</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>نحن نقبل الدفع عبر البطاقات الائتمانية (Visa, binance),بالاضافة الى بريدي موب, سيسيبي,فليكسي</p></div>
                 </div>
                  <div class="faq-item">
-                    <button class="faq-question">
-                        <span>هل الحسابات التي تبيعونها مضمونة؟</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>بالتأكيد. جميع الحسابات والاشتراكات التي نقدمها مضمونة للعمل طوال فترة الاشتراك التي قمت بشرائها. في حال واجهت أي مشكلة، فريق الدعم الفني لدينا جاهز لمساعدتك فورًا.</p>
-                    </div>
+                    <button class="faq-question"><span>هل الحسابات التي تبيعونها مضمونة؟</span><i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer"><p>بالتأكيد. جميع الحسابات والاشتراكات التي نقدمها مضمونة للعمل طوال فترة الاشتراك التي قمت بشرائها. في حال واجهت أي مشكلة، فريق الدعم الفني لدينا جاهز لمساعدتك فورًا.</p></div>
                 </div>
             </div>
         </section>
@@ -179,20 +128,32 @@
         </div>
     </footer>
 
-    <!-- ================== Modal (Pop-up) Structure ================== -->
+    <!-- ================== Main Service Modal (Pop-up) Structure ================== -->
     <div id="service-modal" class="modal-overlay">
         <div class="modal-content">
             <button id="close-modal" class="close-modal-btn">&times;</button>
-            <div id="modal-body">
-                <!-- Service details will be dynamically injected here by JavaScript -->
+            <div id="modal-body"></div>
+        </div>
+    </div>
+    
+    <!-- ================== Sales Modal Structure ================== -->
+    <div id="sales-modal" class="modal-overlay sales-modal-overlay">
+        <div class="modal-content sales-modal-content">
+            <button id="close-sales-modal" class="close-modal-btn">&times;</button>
+            <div id="sales-modal-body">
+                <!-- Sales details will be injected here by JavaScript -->
             </div>
         </div>
     </div>
     
-    <!-- ================== Floating Exclusive Offer Button ================== -->
+    <!-- ================== Floating Buttons ================== -->
     <button id="exclusive-offer-btn" class="floating-btn">
         <i class="fas fa-star"></i>
         <span>عرض حصري</span>
+    </button>
+    <button id="sales-offer-btn" class="floating-btn sales-floating-btn">
+        <i class="fas fa-fire-alt"></i>
+        <span>تخفيضات</span>
     </button>
 
     <!-- Your Custom JavaScript File -->
